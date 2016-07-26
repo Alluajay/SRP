@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/feeds"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Feeds" />
+        <item
+            android:id="@+id/admin_panel"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Admin_panel" />
+
+        <item
+            android:id="@+id/org_list"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Organisation List" />
+    </group>
+
+    <item android:title="Information">
+        <menu>
+            <item
+                android:id="@+id/equip_info"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Equipments" />
+            <item
+                android:id="@+id/dis_info"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Disability Details" />
+        </menu>
+    </item>
+
+    <item android:title="Documents">
+        <menu>
+            <item
+                android:id="@+id/forms"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Govt Application Forms" />
+            <item
+                android:id="@+id/go"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Govt Orders" />
+        </menu>
+    </item>
+
+</menu>

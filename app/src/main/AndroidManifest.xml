@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.allu.srp_psnacet">
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Layout_handler.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Layout_handler.Application_forms"
+            android:label="@string/title_activity_application_forms"
+            android:parentActivityName=".Layout_handler.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Layout_handler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Layout_handler.Govt_Orders"
+            android:label="@string/title_activity_govt__orders"
+            android:parentActivityName=".Layout_handler.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Layout_handler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Layout_handler.Equip_info"
+            android:label="@string/title_activity_equip_info"
+            android:parentActivityName=".Layout_handler.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Layout_handler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Layout_handler.Disability_info"
+            android:label="@string/title_activity_disability_info"
+            android:parentActivityName=".Layout_handler.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Layout_handler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Layout_handler.Org_list"
+            android:label="@string/title_activity_org_list"
+            android:parentActivityName=".Layout_handler.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Layout_handler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Layout_handler.Admin_panel"
+            android:label="@string/title_activity_admin_panel"
+            android:parentActivityName=".Layout_handler.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.allu.srp_psnacet.Layout_handler.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

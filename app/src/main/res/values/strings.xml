@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SRP_PSNACET</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_application_forms">Application_forms</string>
+    <string name="title_activity_govt__orders">Govt_Orders</string>
+    <string name="title_activity_equip_info">Equip_info</string>
+    <string name="title_activity_disability_info">Disability_info</string>
+    <string name="title_activity_org_list">Org_list</string>
+    <string name="title_activity_admin_panel">Admin_panel</string>
+</resources>
