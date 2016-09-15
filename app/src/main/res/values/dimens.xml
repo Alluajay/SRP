@@ -9,7 +9,7 @@
 
     <!--feed layout text size-->
     <dimen name="feed_card_cornerradius">10dp</dimen>
-    <dimen name="feed_heading_textsize">32dp</dimen>
+    <dimen name="feed_heading_textsize">25dp</dimen>
     <dimen name="feed_desc_textsize">15dp</dimen>
-    <dimen name="feed_type_textsize">27dp</dimen>
+    <dimen name="feed_type_textsize">20dp</dimen>
 </resources>

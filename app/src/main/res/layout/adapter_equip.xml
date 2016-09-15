@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:padding="10dp"
+        app:cardCornerRadius="@dimen/feed_card_cornerradius"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="#00f9f7f7"
+            >
+            <ImageView
+                android:id="@+id/equip_img"
+                android:layout_width="65dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/ic_launcher" />
+            <TextView
+                android:id="@+id/equip_heading"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textSize="@dimen/feed_heading_textsize"
+                android:text="Heading"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:id="@+id/equip_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/equip_heading"
+                android:layout_toLeftOf="@+id/equip_img"
+                android:layout_alignParentTop="true"
+                android:textSize="@dimen/feed_type_textsize"
+                android:text="Type"/>
+            <TextView
+                android:text="Description"
+                android:textSize="@dimen/feed_desc_textsize"
+                android:id="@+id/equip_desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/equip_heading"
+                android:layout_toLeftOf="@+id/equip_img"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,35 +15,37 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.allu.srp_psnacet.Adapters.Org_adapter;
 import com.example.allu.srp_psnacet.Connector.Navigation_connector;
-import com.example.allu.srp_psnacet.Dataclasses.Org_class;
+import com.example.allu.srp_psnacet.Dataclasses.Feed_class;
 import com.example.allu.srp_psnacet.R;
 
-import java.util.ArrayList;
-
-public class Org_list extends AppCompatActivity
+public class Detailed_activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    RecyclerView Org_list;
+    public static String Tag="Detailed_activity";
+    Feed_class feed_class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_org_list);
+        setContentView(R.layout.activity_detailed_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Org_list=(RecyclerView)findViewById(R.id.Org_list);
-        Org_list.setHasFixedSize(true);
-        Org_list.setLayoutManager(new GridLayoutManager(this,1));
-        Org_list.setItemAnimator(new DefaultItemAnimator());
+        Intent i=getIntent();
+        Bundle extras=getIntent().getExtras();
+        Feed_class feed__class=extras.getParcelable("com.package.Feed_class");
+        Log.e(Tag,feed__class.Heading);
 
 
-        Org_adapter org_adapter=new Org_adapter(this,getArray());
-
-        Org_list.setAdapter(org_adapter);
-
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -102,18 +102,5 @@ public class Org_list extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public ArrayList<Org_class> getArray(){
-        ArrayList<Org_class> orgArray=new ArrayList<>();
-
-        Org_class org_class=new Org_class("Alpha", "Alpha to Omega Learning Centre\r\n16, Valliammal Street,\r\n", "chennai", "This is a non profitable organisation which helps physically chalenged students to learn in their natural environment", "", 446443090, 44616257, "krishenterprises@gems.vsnl.net.in");
-        Org_class org_class1=new Org_class( "Helen keller service society for the disabled", "Helen Keller Service Society for the Disabled\r\nVizhiyagam, Viswanathapuram,\r\n", "madurai", "This is a non?profit, charitable, voluntary organization established in the year 1979. The organization implements service projects for the welfare of the disabled in Tamil Nadu, founded by Dr. G Thiruvasagam for the service of people in the field of welfare of the disabled in rural areas.\r\n", "", 452641446, 452640735, "hkssd@md3.vsnl.net.in");
-        Org_class org_class2=new Org_class( "Amar Seva Sangam", "Amar Seva Sangam\r\nSulochana Gardens, Post Box No. 001, Tenkasi Road,\r\nAyikudi", "Dindigul", "Physically challenged children from the age of five to seventeen are provided with free shelter, food, clothing, medical aid and appliances at our Home so that they can pursue their education at our School without any financial worry. If they opt for higher education outside the campus, they are also provided free transport. The children are also given special coaching.\r\n", "",448274035, 8240402, "amarseva@md3.vsnl.net.in");
-
-        orgArray.add(org_class);
-        orgArray.add(org_class1);
-        orgArray.add(org_class2);
-        return orgArray;
     }
 }

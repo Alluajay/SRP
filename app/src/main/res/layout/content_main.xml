@@ -10,11 +10,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Layout_handler.MainActivity"
+    android:background="@color/colorAccent"
     tools:showIn="@layout/app_bar_main">
-
-    <Button
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/SOS"
-        android:text="SOS"/>
+        app:cardElevation="10dp"
+        android:id="@+id/soscard">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SOS"
+            android:background="@color/colorPrimary"
+            android:textSize="20dp"
+            android:text="SOS"/>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/feed_list"
+        android:layout_below="@id/soscard"/>
 </RelativeLayout>

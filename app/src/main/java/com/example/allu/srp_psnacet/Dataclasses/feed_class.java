@@ -3,17 +3,17 @@ package com.example.allu.srp_psnacet.Dataclasses;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
  * Created by allu on 7/26/16.
  */
-public class feed_class implements Parcelable {
-    String Heading,Type,Desc,Pic_link;
+public class Feed_class implements Parcelable {
+    public String Feed_class_tag="com.android.feedclass";
+    public String Heading,Type,Desc,Pic_link;
     int auth;
 
-    public feed_class(String head,String ty,String des,String pic,int au){
+    public Feed_class(String head, String ty, String des, String pic, int au){
         this.Heading=head;
         this.Type=ty;
         this.Desc=des;
@@ -32,7 +32,7 @@ public class feed_class implements Parcelable {
     }
 
 
-    protected feed_class(Parcel in) {
+    protected Feed_class(Parcel in) {
         Heading = in.readString();
         Type = in.readString();
         Desc = in.readString();
@@ -40,15 +40,15 @@ public class feed_class implements Parcelable {
         auth = in.readInt();
     }
 
-    public static final Creator<feed_class> CREATOR = new Creator<feed_class>() {
+    public static final Creator<Feed_class> CREATOR = new Creator<Feed_class>() {
         @Override
-        public feed_class createFromParcel(Parcel in) {
-            return new feed_class(in);
+        public Feed_class createFromParcel(Parcel in) {
+            return new Feed_class(in);
         }
 
         @Override
-        public feed_class[] newArray(int size) {
-            return new feed_class[size];
+        public Feed_class[] newArray(int size) {
+            return new Feed_class[size];
         }
     };
 
